@@ -1,4 +1,6 @@
-﻿using System;
+﻿using KursovayaColledge.PageFolder.ClientFolder;
+using KursovayaColledge.PageFolder.DirectorPageFolder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,11 +24,12 @@ namespace KursovayaColledge.WindowFolder.DirectorFolder
         public DirectorWindow()
         {
             InitializeComponent();
+            MainFrame.Navigate(new AllStatisticPage());
         }
 
         private void AddBookBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new StatisticVidReklamaPage());
         }
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
@@ -41,7 +44,7 @@ namespace KursovayaColledge.WindowFolder.DirectorFolder
 
         private void ListBookBtn_Click(object sender, RoutedEventArgs e)
         {
-
+            MainFrame.Navigate(new AllStatisticPage());
         }
     }
 }

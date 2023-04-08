@@ -44,6 +44,12 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="LiveCharts, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.0.9.7\lib\net45\LiveCharts.dll</HintPath>
+    </Reference>
+    <Reference Include="LiveCharts.Wpf, Version=0.9.7.0, Culture=neutral, PublicKeyToken=0bc1f845d1ebb8df, processorArchitecture=MSIL">
+      <HintPath>..\packages\LiveCharts.Wpf.0.9.7\lib\net45\LiveCharts.Wpf.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=2.1.2.0, Culture=neutral, PublicKeyToken=df2a72020bd7962a, processorArchitecture=MSIL">
       <HintPath>..\packages\MaterialDesignColors.2.1.2\lib\net462\MaterialDesignColors.dll</HintPath>
     </Reference>
@@ -129,6 +135,12 @@
     <Compile Include="PageFolder\ClientFolder\ClientListPage.xaml.cs">
       <DependentUpon>ClientListPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PageFolder\DirectorPageFolder\AllStatisticPage.xaml.cs">
+      <DependentUpon>AllStatisticPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageFolder\DirectorPageFolder\StatisticVidReklamaPage.xaml.cs">
+      <DependentUpon>StatisticVidReklamaPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageFolder\EmployeeFolder\EmployeeAddPage.xaml.cs">
       <DependentUpon>EmployeeAddPage.xaml</DependentUpon>
     </Compile>
@@ -199,6 +211,14 @@
     <Page Include="PageFolder\ClientFolder\ClientListPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="PageFolder\DirectorPageFolder\AllStatisticPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageFolder\DirectorPageFolder\StatisticVidReklamaPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageFolder\EmployeeFolder\EmployeeAddPage.xaml">
       <Generator>MSBuild:Compile</Generator>
@@ -291,9 +311,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="PageFolder\DirectorPageFolder\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="ResourceFolder\BackgroundImage.png" />
   </ItemGroup>
