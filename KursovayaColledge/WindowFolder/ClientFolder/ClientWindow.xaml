@@ -52,8 +52,8 @@
                         </Button>
                     </StackPanel>
                     <Button x:Name="ExitBtn" Width="260"
-                            VerticalAlignment="Bottom"
-                            Grid.Row="1" Click="ExitBtn_Click">
+                            VerticalAlignment="Top"
+                            Grid.Row="1" Click="ExitBtn_Click" Margin="20,419,20,0">
                         <StackPanel Orientation="Horizontal">
 
                             <TextBlock Text="Выйти" Style="{DynamicResource ButtonTextBlock}"/>

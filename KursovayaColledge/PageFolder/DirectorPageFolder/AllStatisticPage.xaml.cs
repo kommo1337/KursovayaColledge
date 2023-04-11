@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.ComponentModel;
 
 namespace KursovayaColledge.PageFolder.DirectorPageFolder
 {
@@ -32,7 +33,7 @@ namespace KursovayaColledge.PageFolder.DirectorPageFolder
             
             var series = new LineSeries
             {
-                Title = "Number of Ads",
+                Title = "Количество рекламы",
                 Values = new ChartValues<int>(adsCount),
                 PointGeometry = null
             };
@@ -41,8 +42,8 @@ namespace KursovayaColledge.PageFolder.DirectorPageFolder
             AdsChart.Series = new SeriesCollection { series };
 
            
-            AdsChart.AxisX.Add(new Axis { Title = "Year", Labels = years });
-            AdsChart.AxisY.Add(new Axis { Title = "Number of Ads" });
+            AdsChart.AxisX.Add(new Axis { Title = "Год", Labels = years });
+            AdsChart.AxisY.Add(new Axis { Title = "Количество рекламы" });
 
         }
     }

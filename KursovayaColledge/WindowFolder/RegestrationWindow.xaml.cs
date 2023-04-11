@@ -34,7 +34,7 @@ namespace KursovayaColledge.WindowFolder
                 {
                     UserName = loginTB.Text,
                     UserPassword = PasswordTB.Text,
-                    RoleId = 2
+                    RoleId = 5
                 });
                 DBEntities.GetContext().SaveChanges();
 

@@ -6,7 +6,7 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:KursovayaColledge"
         mc:Ignorable="d"
-        Title="RegWindow" Height="400" Width="500">
+        Title="RegWindow" Height="730" Width="980" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.Background>
             <ImageBrush ImageSource="/ResourceFolder/BackgroundImage.png"/>
@@ -27,7 +27,7 @@
                 <TextBox Grid.Row="1" x:Name="loginTB" Margin="0,20,0,0" materialDesign:HintAssist.Hint="Логин"/>
                 <TextBox Grid.Row="2" x:Name="PasswordTB" Margin="0,10,0,0" materialDesign:HintAssist.Hint="Пароль" materialDesign:PasswordBoxAssist.Password="True"/>
                 <TextBox Grid.Row="3" x:Name="RepeatPaswordTB" Margin="0,10,0,101" materialDesign:HintAssist.Hint="Повторите пароль" materialDesign:PasswordBoxAssist.Password="True"/>
-                <Button Grid.Row="3" Margin="0,61,0,42" Content="Зарегистрироваться" HorizontalAlignment="Center" Width="187" Click="Button_Click"/>
+                <Button Grid.Row="3" Margin="0,71,0,26" Content="Зарегистрироваться" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Width="202" Click="Button_Click"/>
             </Grid>
         </materialDesign:Card>
     </Grid>
