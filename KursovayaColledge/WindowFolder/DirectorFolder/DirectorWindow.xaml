@@ -41,13 +41,13 @@
                         <Button x:Name="ListBookBtn" Width="260" Click="ListBookBtn_Click">
                             <StackPanel Orientation="Horizontal">
 
-                                <TextBlock Text="Список клиентов" Style="{DynamicResource ButtonTextBlock}"/>
+                                <TextBlock Text="Статистика за года" Style="{DynamicResource ButtonTextBlock}"/>
                             </StackPanel>
                         </Button>
                         <Button x:Name="AddBookBtn" Width="260" Click="AddBookBtn_Click" Margin="0 30 0 0" >
                             <StackPanel Orientation="Horizontal">
 
-                                <TextBlock Text="Добавить клиента" Style="{DynamicResource ButtonTextBlock}"/>
+                                <TextBlock Text="Статистика по видам" Style="{DynamicResource ButtonTextBlock}"/>
                             </StackPanel>
                         </Button>
                     </StackPanel>

@@ -56,7 +56,7 @@
                                     Binding="{Binding ZakazDate}"
                                     Width="*"/>
                     <DataGridTextColumn Header="Имя работника"
-                                    Binding="{Binding Employee.EmployeeName}"
+                                    Binding="{Binding EmployeeName}"
                                     Width="*"/>
                     <DataGridTextColumn Header="Фамилия работника"
                                     Binding="{Binding Employee.EmployeeLastName}"
