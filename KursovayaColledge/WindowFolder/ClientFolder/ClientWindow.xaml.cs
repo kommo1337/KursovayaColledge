@@ -21,6 +21,8 @@ namespace KursovayaColledge.WindowFolder.ClientFolder
     /// </summary>
     public partial class ClientWindow : Window
     {
+        private bool isFullScreen = false;
+
         public ClientWindow()
         {
             InitializeComponent();
@@ -53,6 +55,50 @@ namespace KursovayaColledge.WindowFolder.ClientFolder
         private void AddBookBtn_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new ClientAddPage());
+        }
+
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void MaximizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (isFullScreen)
+            {
+                RestoreWindow();
+            }
+            else
+            {
+                MaximizeWindow();
+            }
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void MaximizeWindow()
+        {
+            WindowState = WindowState.Normal;
+            WindowStyle = WindowStyle.None;
+            WindowState = WindowState.Maximized;
+
+            isFullScreen = true;
+        }
+
+        private void RestoreWindow()
+        {
+            WindowState = WindowState.Normal;
+            WindowStyle = WindowStyle.SingleBorderWindow;
+
+            isFullScreen = false;
+        }
+
+        private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
         }
     }
 }

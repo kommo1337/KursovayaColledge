@@ -21,6 +21,8 @@ namespace KursovayaColledge.WindowFolder.DirectorFolder
     /// </summary>
     public partial class DirectorWindow : Window
     {
+        private bool isFullScreen = false;
+
         public DirectorWindow()
         {
             InitializeComponent();
@@ -34,17 +36,64 @@ namespace KursovayaColledge.WindowFolder.DirectorFolder
 
         private void Border_MouseDown(object sender, MouseButtonEventArgs e)
         {
-
+            DragMove();
         }
 
-        private void ExitBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+        
 
         private void ListBookBtn_Click(object sender, RoutedEventArgs e)
         {
             MainFrame.Navigate(new AllStatisticPage());
         }
+
+        private void MinimizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            WindowState = WindowState.Minimized;
+        }
+
+        private void MaximizeButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (isFullScreen)
+            {
+                RestoreWindow();
+            }
+            else
+            {
+                MaximizeWindow();
+            }
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void MaximizeWindow()
+        {
+            WindowState = WindowState.Normal;
+            WindowStyle = WindowStyle.None;
+            WindowState = WindowState.Maximized;
+
+            isFullScreen = true;
+        }
+
+        private void RestoreWindow()
+        {
+            WindowState = WindowState.Normal;
+            WindowStyle = WindowStyle.SingleBorderWindow;
+
+            isFullScreen = false;
+        }
+
+        private void TitleBar_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            DragMove();
+        }
+
+        private void ExitBtn_Click(object sender, RoutedEventArgs e)
+        {
+            App.Current.Shutdown();
+        }
     }
 }
+

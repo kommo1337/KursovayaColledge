@@ -26,6 +26,15 @@
                    Foreground="Black"
                    HorizontalAlignment="Left"/>
 
+            <StackPanel Grid.Row="0" Background="Transparent" Orientation="Horizontal" MouseLeftButtonDown="TitleBar_MouseLeftButtonDown" HorizontalAlignment="Left" Margin="1099,0,0,0" Width="101">
+                <Button x:Name="MinimizeButton" Width="51" Click="MinimizeButton_Click"  >
+                    <Image Source="/WindowFolder/EployerFolder/free-icon-minimize-sign-6057365.png" Height="16" Width="16"/>
+                </Button>
+                <Button x:Name="CloseButton" Width="50" Click="CloseButton_Click">
+                    <Image Source="/WindowFolder/EployerFolder/free-icon-close-1828665.png" Height="16" Width="16"/>
+                </Button>
+            </StackPanel>
+
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="300"/>
